@@ -65,4 +65,22 @@ Crear una aplicación web interactiva que facilite a sus usuarios gestionar con 
   </tr>
 </table>
 
-<h2>:open_file_folder: Diseño de los Mockup's</h2>
+<h2>:open_file_folder: Otros Archivos importantes </h2>
+
+> Enlace de lo Diseño de los Mockup's 🎨<br>
+
+> Pefil del proyecto PDF 📖
+
+<h2>📕 Licencias</h2>
+<h3>Restricciones de Usos</h3>
+
+![by-nc-nd](https://github.com/EduarM70/Daily.io/assets/107637104/75819e16-1bb7-44a5-8e1d-612bc3e0ea9d)
+
+
+Daily.io está bajo la licencia de CC BY 4.0 DEED, te recomendamos que leas las politicas y condiciones que la licencia ofrece. Si ves interesante este proyecto deberías consider las licencias que tenemos.
+
+
+
+> [!CAUTION]
+> Recuerda siempre hacer referencia a los creadores de este proyecto.
+
