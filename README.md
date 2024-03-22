@@ -7,7 +7,7 @@ Hola colega, ¡Bienvenido al respositorio de desarrollo de Daily.io!, una aplica
 <h2>:wave: Equipo de Daily.io</h2>
 <div style={padding: 10px}>
   <table style={margin: 0 auto}>
-  <tr>
+  <tr align="center">
     <td>Martín Carbajal</td>
     <td>Alexis Pineda</td>
     <td>Mariela Rodríguez</td>
@@ -15,7 +15,7 @@ Hola colega, ¡Bienvenido al respositorio de desarrollo de Daily.io!, una aplica
     <td>Jonh Kevin Navidad</td>
     <td>Roger Daniel Deleon</td>
   </tr>
-    <tr>
+    <tr align="center">
     <td>Full Stack <br> :computer: :art: :bulb:</td>
     <td>Progrador BackEnd <br> :computer: :wrench: :bulb:</td>
     <td>Programadora FrontEnd <br>:computer: :art: :bulb:</td>
@@ -35,14 +35,34 @@ Es una aplicación web multiplataforma, que ofrece un espacio de trabajo para or
 Crear una aplicación web interactiva que facilite a sus usuarios gestionar con eficiencia y control los proyectos de un equipo de trabajo, por medio la utilización del framework de Laravel y React Js, para desarrollar las herramientas permanentes para organizar un proyecto con la metodología Scrum.
 
 <h2>:hammer: Tecnologías Empleadas</h2>
+
+
+
 <table>
+  
   <tr>
+    
+  <td> 
+
+  ![1694479065771](https://github.com/EduarM70/Daily.io/assets/107637104/be3439ea-ec3e-46a8-87a6-fa438ffb2eb6)
+  </td>
+
+  <td>
+
+  ![React](https://github.com/EduarM70/Daily.io/assets/107637104/ae34f17a-344a-4076-871a-1df03a893719)
+  
+  </td>
+
+  <td>
+
+![64b524021adc5990918944](https://github.com/EduarM70/Daily.io/assets/107637104/db9e7e1f-b132-4e54-aa64-2d9e645c36ef)    
+  </td>
+  </tr>
+  <tr align="center">
     <td>Laravel PHP</td>
     <td>React JS</td>
     <td>Tailwind CSS</td>
   </tr>
 </table>
-
-<span>![</span><span>Aquí la descripción de la imagen por si no carga</span><span>]</span><span>(</span><span>[https://raw.githubusercontent.com/parzibyte/WaterPy/master/assets/ImagenV1.png](https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.linkedin.com%2Fpulse%2Fque-es-laravel-denis-borovskoy&psig=AOvVaw2TP7BQ7-UcJLjlLggEx6JT&ust=1711173589736000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMCA-MGYh4UDFQAAAAAdAAAAABAI)https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.linkedin.com%2Fpulse%2Fque-es-laravel-denis-borovskoy&psig=AOvVaw2TP7BQ7-UcJLjlLggEx6JT&ust=1711173589736000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMCA-MGYh4UDFQAAAAAdAAAAABAI</span><span>)</span>
 
 <h2>:open_file_folder: Diseño de los Mockup's</h2>
