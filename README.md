@@ -21,7 +21,7 @@ Hola colega, ¡Bienvenido al respositorio de desarrollo de Daily.io!, una aplica
     <td>Programadora FrontEnd <br>:computer: :art: :bulb:</td>
     <td>Programadora FrontEnd <br> :computer: :art: :bulb:</td>
     <td>Progrador BackEnd <br>:computer: :wrench: :bulb:</td>
-    <td>Programadora FrontEnd <br> :computer: :art: :bulb:</td>
+    <td>Programador FrontEnd <br> :computer: :art: :bulb:</td>
   </tr>
 </table>
 </div>
