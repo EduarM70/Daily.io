@@ -67,9 +67,9 @@ Crear una aplicación web interactiva que facilite a sus usuarios gestionar con 
 
 <h2>:open_file_folder: Otros Archivos importantes </h2>
 
-> Enlace de lo Diseño de los Mockup's 🎨<br>
+> Enlace de lo [Diseño de los Mockup's](https://drive.google.com/drive/folders/1TkRoJbfO1u4NgHRwUCSTqL-WBu3RwOE0?usp=sharing) 🎨<br>
 
-> Pefil del proyecto PDF 📖
+> Pefil del [proyecto PDF](https://drive.google.com/file/d/1JFaYI2DVaIp1coMA5jGgilcfrPA_Oswa/view?usp=sharing) 📖
 
 <h2>📕 Licencias</h2>
 <h3>Restricciones de Usos</h3>
