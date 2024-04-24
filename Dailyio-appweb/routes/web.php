@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/prueba', function(){
-    return view('app');
+    return view('layouts.app');
 });
