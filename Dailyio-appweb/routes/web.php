@@ -14,3 +14,6 @@ Route::get('/agenda', function(){
     return view('agenda');
 });
 
+Route::get('/tareas', function(){
+    return view('tareas');
+});

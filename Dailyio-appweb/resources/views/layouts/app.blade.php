@@ -30,11 +30,10 @@
     <!-- COMPONENTE DEL SIDEBAR -->
     <x-sliderbar />
     <!-- Contenido prinicpal -->
-    <div class="p-4 sm:ml-64 dark:bg-slate-800 bg-slate-50 h-screen">
+    <div class="p-4 sm:ml-64 dark:bg-slate-800 bg-slate-50 lg:h-screen">
         <div class="p-4 mt-14">
             @yield('content')
         </div>
-        
     </div>
 </body>
 <script>

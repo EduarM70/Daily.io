@@ -36,12 +36,15 @@
             </div>
         </div>
         <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
-            <h3 class="font-bold text-cyan-400 mb-3">Reuniones</h3>
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="font-bold text-cyan-400">Reuniones</h3>
+                <button class="p-2 pb-1 text-sm bg-cyan-400 rounded-md text-white flex items-center gap-2"><i class="fi fi-sr-circle-video"></i><span class="hidden xl:block mb-1">Agendar Reunión</span></button>
+            </div>
             <div class="text-center p-4 bg-cyan-50 dark:bg-slate-600 border border-cyan-300 dark:border-slate-500 rounded-lg">
                 <h4 class="text-sm text-slate-500 dark:text-slate-300">En hora Buena</h4>
                 {{-- <i class="fi fi-rr-face-awesome text-4xl my-2 block"></i> --}}
                 <h3 class="font-bold text-lg dark:text-cyan-300 my-3 text-cyan-500">¡No tienes Reuniones!</h3>
-                <button class="bg-cyan-400 text-white px-4 py-2 text-sm rounded-xl transition duration-500 hover:bg-cyan-500">Agregar Reunión</button>
+                <button data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="bg-cyan-400 text-white px-4 py-2 text-sm rounded-xl transition duration-500 hover:bg-cyan-500">Agregar Reunión</button>
             </div>
         </div>
         <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
@@ -50,10 +53,12 @@
                 <h4 class="text-sm text-slate-500 dark:text-slate-300">En hora Buena</h4>
                 {{-- <i class="fi fi-rr-face-awesome text-4xl my-2 block"></i> --}}
                 <h3 class="font-bold text-lg dark:text-emerald-300 my-3 text-emerald-500">¡No tienes Notificaciones!</h3>
-                <button class="bg-emerald-400 text-white px-4 py-2 text-sm rounded-xl transition duration-500 hover:bg-emerald-500">Agregar Reunión</button>
+                <button class="bg-emerald-400 text-white px-4 py-2 text-sm rounded-xl transition duration-500 hover:bg-emerald-500">Espera por Notificaciones</button>
             </div>
         </div>
     </div>
-</div>    
+</div>
+
+<x-modal titleModal="Crea una Reunión" button="Agendar Reunión" color="cyan" />
 @endsection
 
