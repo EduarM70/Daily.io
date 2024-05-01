@@ -9,3 +9,8 @@ Route::get('/', function () {
 Route::get('/prueba', function(){
     return view('layouts.app');
 });
+
+Route::get('/agenda', function(){
+    return view('agenda');
+});
+
