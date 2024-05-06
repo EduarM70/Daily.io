@@ -60,5 +60,6 @@
 </div>
 
 <x-modal titleModal="Crea una Reunión" button="Agendar Reunión" color="cyan" />
+
 @endsection
 
