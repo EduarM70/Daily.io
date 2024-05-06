@@ -9,7 +9,7 @@ export default {
   theme: {
     extend: {},
     fontFamily: {
-      'DM' : ['"DM Sans"', 'sans-serif']
+      'dmsans' : ['"DM Sans"', 'sans-serif']
     }
   },
   plugins: [

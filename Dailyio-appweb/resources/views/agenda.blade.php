@@ -26,7 +26,7 @@
     <div class="mt-10">
         <h2 class="text-4xl font-black uppercase">Tu Agenda</h2>
     </div>
-    <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-3 gap-4">
+    <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
         <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
             <h3 class="font-bold text-violet-400 mb-3">Actividades</h3>
             <div class="text-center p-4 bg-violet-50 dark:bg-slate-600 border border-violet-300 dark:border-slate-500 rounded-lg">

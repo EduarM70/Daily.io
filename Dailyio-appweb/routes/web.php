@@ -17,3 +17,8 @@ Route::get('/agenda', function(){
 Route::get('/tareas', function(){
     return view('tareas');
 });
+
+Route::get('/proyect', function(){
+    return view('main');
+});
+
