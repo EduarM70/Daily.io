@@ -7,5 +7,13 @@ Route::get('/', function () {
 });
 
 Route::get('/prueba', function(){
-    return view('app');
+    return view('layouts.app');
+});
+
+Route::get('/agenda', function(){
+    return view('agenda');
+});
+
+Route::get('/tareas', function(){
+    return view('tareas');
 });
