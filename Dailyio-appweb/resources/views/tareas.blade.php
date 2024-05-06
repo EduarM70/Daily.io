@@ -27,187 +27,113 @@
     <div class="mt-10">
         <h2 class="text-4xl font-black uppercase">Tus Tareas</h2>
     </div>
-
-    <div class="inline-flex items-center   space-x-20 mt-5 p-4 w-2/4 text-lg ">
-        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-            Agregar Tareas +
-        </button>
-        <div class="inline-flex space-x-1.5 font-bold	">
-            <h1><a href="">Personal</a></h1>
-            <p class="">/</p>
-            <h1><a href="">Proyectos</a></h1>
-        </div>
-    </div>
-
-
-
+    <button type="button" class="mt-5 inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 font-medium rounded-lg text-base px-5 py-2.5 text-center ">
+        Agregar Tareas
+    </button>
     <div class="flex-1 p-4">
+        <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-2 gap-4">
+            <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-cyan-400 text-xl">Hoy</h3>
+                    <button class="p-2 pb-1 text-sm bg-cyan-400 rounded-md text-white flex items-center gap-2"><span class="hidden xl:block mb-1">Fecha de entrega</span></button>
+                </div>
+                <div class="text-center p-4 bg-cyan-50 dark:bg-slate-600 border border-cyan-300 dark:border-slate-500 rounded-lg">
 
-        <!-- Contenedor de las 4 secciones (disminuido para dispositivos pequeños) -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2 p-2">
-            <!-- Sección 1 - Gráfica de Usuarios -->
-            <div class="bg-white p-4 rounded-md">
-                <h2 class="text-gray-500 text-lg font-semibold pb-1">Hoy</h2>
-                <div class="my-1"></div> <!-- Espacio de separación -->
-                <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div> <!-- Línea con gradiente -->
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Articulo IEEE</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">06/05/2024</p>
+                            </div>
                         </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
+                    </li>
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Catedra BDD</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">06/05/2024</p>
+                            </div>
                         </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
+                    </li>
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Proyecto POO</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">06/05/2024</p>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+            <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="font-bold text-cyan-400 text-xl">Mañana</h3>
+                </div>
+                <div class="text-center p-4 bg-cyan-50 dark:bg-slate-600 border border-cyan-300 dark:border-slate-500 rounded-lg">
 
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Proyecto POO</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white"></p>
+                            </div>
                         </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
+                    </li>
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Desafio Practico</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white"></p>
+                            </div>
                         </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
+                    </li>
+                    <li class="p-2 rounded-lg list-none">
+                        <div class="flex align-middle flex-row justify-between">
+                            <div class="p-2">
+                                <input type="checkbox" class="h-6 w-6 " value="true" />
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white">Crear Proyecto</p>
+                            </div>
+                            <div class="p-2">
+                                <p class="text-lg dark:text-white"></p>
+                            </div>
                         </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
-                        </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
+                    </li>
+                </div>
             </div>
 
-            <!-- Sección 2 - Gráfica de Comercios -->
-            <div class="bg-white p-4 rounded-md">
-                <h2 class="text-gray-500 text-lg font-semibold pb-1">Mañana</h2>
-                <div class="my-1"></div> <!-- Espacio de separación -->
-                <div class="bg-gradient-to-r from-cyan-300 to-cyan-500 h-px mb-6"></div> <!-- Línea con gradiente -->
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
-                        </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
-                        </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
-                        </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-
-                <li class="p-2 rounded-lg list-none">
-                    <div class="flex align-middle flex-row justify-between">
-                        <div class="p-2">
-                            <input type="checkbox" class="h-6 w-6 " value="true" />
-                        </div>
-                        <div class="p-2">
-                            <p class="text-lg text-black">Tarea 1</p>
-                        </div>
-                        <button class="flex text-red-500 border-2 border-red-500 p-2 rounded-lg">
-                            <svg class="h-6 w-6 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="15" y1="9" x2="9" y2="15" />
-                                <line x1="9" y1="9" x2="15" y2="15" />
-                            </svg>
-                            <span>Eliminar</span>
-                        </button>
-                    </div>
-                </li>
-            </div>
+            <a class="dark:text-indigo-500 inline-flex items-center">Siguiente Semana
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5l7 7-7 7"></path>
+                </svg>
+            </a>
         </div>
     </div>
 </div>
