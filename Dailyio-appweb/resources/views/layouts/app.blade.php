@@ -22,7 +22,7 @@
     </script>
 </head>
 
-<body class="font-DM dark:bg-slate-500">
+<body class="font-dmsans dark:bg-slate-500">
     <!-- PAGINA PRINCIPAL DE LA APP -->
 
     <!-- COMPONENTE HEADER -->

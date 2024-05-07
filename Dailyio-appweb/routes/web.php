@@ -23,3 +23,7 @@ Route::get('/sprints', function(){
 });
 
     
+Route::get('/proyect', function(){
+    return view('main');
+});
+
