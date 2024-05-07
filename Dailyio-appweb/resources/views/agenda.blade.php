@@ -26,7 +26,7 @@
     <div class="mt-10">
         <h2 class="text-4xl font-black uppercase">Tu Agenda</h2>
     </div>
-    <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-3 gap-6">
+    <div class="w-full mt-4 dark:text-slate-200 grid lg:grid-cols-2 2xl:grid-cols-3 gap-6">
         <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
             <h3 class="font-bold text-violet-400 mb-3">Actividades</h3>
             <div class="text-center p-4 bg-violet-50 dark:bg-slate-600 border border-violet-300 dark:border-slate-500 rounded-lg">
@@ -79,7 +79,54 @@
     </div>
 </div>
 
-<x-modal titleModal="Crea una Reunión" button="Agendar Reunión" color="cyan" />
+<x-modal titleModal="Crea una Reunión" color="cyan" >
+    <!-- Modal body -->
+    <form class="p-4 md:p-5" method="POST">
+        <div class="grid gap-4 mb-4 grid-cols-2">
+            <div class="col-span-2">
+                <label for="titulo" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Título</label>
+                <input type="text" name="titulo" id="titulo" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Agregar título" required="">
+            </div>
+            <div class="col-span-2 sm:col-span-1">
+                <label for="proyect" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Proyecto</label>
+                <select id="proyect" name="proyect" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option value="1" selected>Daily.io</option>
+                    <option value="2">Medikids</option>
+                    <option value="3">Servidores CentOS</option>
+                    <option value="4">ImportCarLeo</option>
+                    <option value="5">AeroPost</option>
+                </select>
+            </div>            
+            <div class="col-span-2 sm:col-span-1">
+                <label for="plataform" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Plataforma</label>
+                <select id="plataform" name="plataform" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                    <option value="Meet" selected>Google Meet</option>
+                    <option value="Teams">Teams</option>
+                    <option value="Zoom">Zoom</option>
+                </select>
+            </div>
+            <!-- date picker -->
+            <div class="">
+                <div class="relative max-w-sm">
+                    <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+                       <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                          <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z"/>
+                        </svg>
+                    </div>
+                    <input datepicker datepicker-autohide type="text" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Selecciona la fecha">
+                  </div>
+            </div>
+            <div class="col-span-2">
+                <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descripción</label>
+                <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write product description here"></textarea>                    
+            </div>
+        </div>
+        <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+            <svg class="me-1 -ms-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd"></path></svg>
+            Agendar Reunión
+        </button>
+    </form>
+</x-modal>
 
 @endsection
 

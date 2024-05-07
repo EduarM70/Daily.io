@@ -10,9 +10,6 @@ Route::get('/prueba', function(){
     return view('layouts.app');
 });
 
-Route::get('/agenda', function(){
-    return view('agenda');
-});
 
 Route::get('/tareas', function(){
     return view('tareas');
@@ -26,4 +23,11 @@ Route::get('/sprints', function(){
 Route::get('/proyect', function(){
     return view('main');
 });
+
+Route::view('/proyect', 'main')->name('proyect');
+
+Route::view('/agenda', 'agenda')->name('agenda');
+
+
+// Rutas para Reuniones (Meets)
 
