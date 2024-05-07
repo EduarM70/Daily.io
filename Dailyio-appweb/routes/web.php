@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/prueba', function(){
+Route::get('/prueba', function () {
     return view('layouts.app');
 });
 
@@ -15,23 +15,26 @@ Route::view('/login', "login")->name('login');
 Route::view('/registro', "register")->name('registro');
 Route::view('/privada', "secret")->middleware('auth')->name('privada');
 
-Route::post('/validar-registro',[LoginController::class,'register'])->name('validar-registro');
-Route::post('/inicia-sesion', [LoginController::class,'login'])->name('inicia-sesion');
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');
-Route::get('/agenda', function(){
+Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/agenda', function () {
     return view('agenda');
 });
 
-Route::get('/tareas', function(){
+Route::get('/tareas', function () {
     return view('tareas');
 });
 
-Route::get('/sprints', function(){
+Route::get('/sprints', function () {
     return view('sprints');
 });
 
-    
-Route::get('/proyect', function(){
+
+Route::get('/proyect', function () {
     return view('main');
 });
 
+Route::get('/taskSprint', function () {
+    return view('taskSprint');
+});
