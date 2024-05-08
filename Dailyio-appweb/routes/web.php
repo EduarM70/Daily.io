@@ -19,15 +19,18 @@ Route::get('/prueba', function () {
 Route::middleware('guest')->group(function () {
     /* -------------------------  AUTH ------ */
 
-    /* -----  LOGIN ------ */
-    Route::view('/login', 'auth.login')->name('login');
-    Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
     
-    /* -----  REGISTER ------ */
-    Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
-    Route::view('/register', "auth.register")->name('registro');
 
 });
+
+/* -----  LOGIN ------ */
+Route::view('/login', 'auth.login')->name('login');
+Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+
+/* -----  REGISTER ------ */
+Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+Route::view('/register', "auth.register")->name('registro');
+
 
 Route::middleware('auth')->group(function () {
     /* -------------------------  AUTH ------ */
