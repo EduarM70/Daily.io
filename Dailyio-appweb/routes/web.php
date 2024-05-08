@@ -35,6 +35,10 @@ Route::middleware('auth')->group(function () {
     Route::view('/privada', "secret")->name('privada');
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+    Route::get('/agenda', function(){
+        return view('agenda');
+    })->name('agenda.index');
+
 });
 
 /* -----  REGISTER ------ */
@@ -50,9 +54,7 @@ Route::get('/backlogs/create', [BacklogController::class, 'create'])->name('back
 Route::post('/backlogs', [BacklogController::class, 'store'])->name('backlogs.store');
 Route::delete('/backlogs/{backlog}', [BacklogController::class, 'destroy'])->name('backlogs.destroy');
 
-Route::get('/agenda', function(){
-    return view('agenda');
-})->name('agenda.index');
+
 
 Route::get('/tareas', function () {
     return view('tareas');
