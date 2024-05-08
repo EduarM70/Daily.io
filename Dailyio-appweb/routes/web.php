@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\BacklogController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,3 +19,8 @@ Route::view('/privada', "secret")->middleware('auth')->name('privada');
 Route::post('/validar-registro',[LoginController::class,'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class,'login'])->name('inicia-sesion');
 Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+
+Route::get('/backlogs', [BacklogController::class, 'index'])->name('backlogs.index');
+Route::get('/backlogs/create', [BacklogController::class, 'create'])->name('backlogs.create');
+Route::post('/backlogs', [BacklogController::class, 'store'])->name('backlogs.store');
+Route::delete('/backlogs/{backlog}', [BacklogController::class, 'destroy'])->name('backlogs.destroy');
