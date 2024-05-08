@@ -9,7 +9,7 @@ Route::get('/', function () {
 });
 
 Route::get('/prueba', function(){
-    return view('app');
+    return view('layouts.app');
 });
 
 Route::view('/login', "login")->name('login');
@@ -24,3 +24,20 @@ Route::get('/backlogs', [BacklogController::class, 'index'])->name('backlogs.ind
 Route::get('/backlogs/create', [BacklogController::class, 'create'])->name('backlogs.create');
 Route::post('/backlogs', [BacklogController::class, 'store'])->name('backlogs.store');
 Route::delete('/backlogs/{backlog}', [BacklogController::class, 'destroy'])->name('backlogs.destroy');
+Route::get('/agenda', function(){
+    return view('agenda');
+});
+
+Route::get('/tareas', function(){
+    return view('tareas');
+});
+
+Route::get('/sprints', function(){
+    return view('sprints');
+});
+
+    
+Route::get('/proyect', function(){
+    return view('main');
+});
+
