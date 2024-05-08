@@ -12,7 +12,8 @@ class ProyectController extends Controller
      */
     public function index()
     {
-        //
+        // retornar a la vista de Proyectos
+        return view('proyects', ['proyectos' => Proyect::all()]);
     }
 
     /**
@@ -28,7 +29,23 @@ class ProyectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validar datos
+        $request->validate([
+            "nameProyect" => "required|min:10",
+            "date" => "required|date|after_or_equal:today",
+            "descripcion"=> "required|min:25",
+            "goals"=> "required|min:25",
+        ]);
+        // creando proyecto
+        $request->user()->protects()->create([
+            "name"=> $request->get("nameProyect"),
+            "fecha_inicio" => $request->get("date"),
+            "descripcion" => $request->get("description"),
+            "goals"=> $request->get("goals"),
+        ]);
+        
+        return to_route('proyect.index');
+
     }
 
     /**

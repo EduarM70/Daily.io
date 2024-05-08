@@ -12,7 +12,7 @@ class MeetController extends Controller
      */
     public function index()
     {
-        //
+        
     }
 
     /**
@@ -35,7 +35,7 @@ class MeetController extends Controller
             "description"=> "required",
             "proyect_id" => "required",
             "plataform"=> "required",
-            "date" => "required|date|after:today",
+            "date" => "required|date|after_or_equal:today",
             "time"=> "required|date_format:H:i",
         ]);
 

@@ -14,9 +14,11 @@ return new class extends Migration
         Schema::create('proyects', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->date("fecha_inicio");
             $table->string('description');
             $table->string('goals');
-            $table->string('justificacion');
+            $table->double('progreso')->default(0);
+            $table->boolean('estado')->default(false);
             $table->string('user_id');
             $table->timestamps();
         });

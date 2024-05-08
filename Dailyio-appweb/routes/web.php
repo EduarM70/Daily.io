@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MeetController;
+use App\Http\Controllers\ProyectController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -29,16 +30,15 @@ Route::get('/sprints', function () {
 });
 
 
-Route::get('/proyect', function () {
-    return view('main');
-})->name('proyect.index');
-
-Route::view('/proyect', 'main')->name('proyect');
-
+Route::view('/proyect/main', 'main')->name('proyect.index');
 
 Route::get('/taskSprint', function () {
     return view('taskSprint');
 });
+
+// Rutas para Proyectos del Usuario (Proyects)
+Route::get('/proyectos', [ ProyectController::class, 'index'] )->name('proyects.index');
+Route::post('/proyectos/store', [ProyectController::class, 'store'])->name('proyect.store');
 
 // Rutas para Reuniones (Meets)
 
