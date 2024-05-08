@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Meet extends Model
+class Proyect extends Model
 {
     use HasFactory;
-
+    
     protected $fillable = [
-        "title",
+        "name",
         "description",
-        "user_id",
-        "proyect_id",
-        "plataform",
-        "date",
-        "time"
+        "goals",
+        "justicacion",
+        "user_id"
     ];
 }

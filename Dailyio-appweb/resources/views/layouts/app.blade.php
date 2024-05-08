@@ -35,6 +35,8 @@
             @yield('content')
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/datepicker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
 </body>
 <script>
     var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');

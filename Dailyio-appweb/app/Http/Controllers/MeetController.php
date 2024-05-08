@@ -28,20 +28,38 @@ class MeetController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // dd($request->all());
+
         $request->validate([
+            "title" => "required",
             "description"=> "required",
             "proyect_id" => "required",
             "plataform"=> "required",
+            "date" => "required|date|after:today",
+            "time"=> "required|date_format:H:i",
         ]);
+
         
-        //
-        Meet::create([
-            "description"=> $request->description,
-            "proyect_id"=> $request->poryect_id,
-            "plataform"=> $request->plataform,
-            "user_id" => auth()->user()->id
+
+        $newMeet = Meet::create([
+            "title" => $request->get('title'),
+            "description" => $request->get('description'),
+            "proyect_id" => $request->get("proyect_id"),
+            "plataform" => $request->get("plataform"),
+            "user_id" => auth()->user()->id,
+            "date" => $request->get("date"),
+            "time"=> $request->get("time")
         ]);
+
+        if($newMeet){
+            return to_route("proyect.index");
+        }else{
+            return to_route("tareas");
+        }
+
+
+
+        
         
     }
 

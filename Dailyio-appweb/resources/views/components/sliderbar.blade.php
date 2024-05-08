@@ -31,7 +31,7 @@
             </a>
          </li>
          <li>
-            <a href="{{ route('agenda') }}" class="{{ $clases }}" active="{{request()->routeIs('agenda')}}">
+            <a href="{{ route('agenda.index') }}" class="{{ $clases }}" active="{{request()->routeIs('agenda.index')}}">
                <i class="fi fi-rr-address-book w-6 h-6 {{ $iclass }}"></i>
                <span class="flex-1 ms-3 whitespace-nowrap">Agenda</span>
             </a>

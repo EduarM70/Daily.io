@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MeetController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -18,13 +19,10 @@ Route::view('/privada', "secret")->middleware('auth')->name('privada');
 Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/agenda', function () {
-    return view('agenda');
-});
 
 Route::get('/tareas', function () {
     return view('tareas');
-});
+})->name('tareas');
 
 Route::get('/sprints', function () {
     return view('sprints');
@@ -33,15 +31,16 @@ Route::get('/sprints', function () {
 
 Route::get('/proyect', function () {
     return view('main');
-});
+})->name('proyect.index');
 
 Route::view('/proyect', 'main')->name('proyect');
 
-Route::view('/agenda', 'agenda')->name('agenda');
-
-
-// Rutas para Reuniones (Meets)
 
 Route::get('/taskSprint', function () {
     return view('taskSprint');
 });
+
+// Rutas para Reuniones (Meets)
+
+Route::view('/agenda','agenda')->name('agenda.index');
+Route::post('/agenda', [MeetController::class, 'store'])->name('meet.store');

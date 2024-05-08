@@ -13,12 +13,14 @@ return new class extends Migration
     {
         Schema::create('meets', function (Blueprint $table) {
             $table->id();
-            $table->string('description');
-            $table->foreignId('user_id')->constrained()->onDelete('');
-            $table->foreignId('proyect_id')->constrained()->onDelete('');
+            $table->string('title');
+            $table->string('description')->nullable();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('proyect_id')->constrained()->cascadeOnDelete();
             $table->string('plataform');
+            $table->date('date');
+            $table->time('time');
             $table->timestamps();
-            
         });
     }
 
