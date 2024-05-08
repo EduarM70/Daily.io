@@ -8,27 +8,42 @@ use App\Http\Controllers\ProyectController;
 use App\Http\Controllers\SprintController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Route::get('/prueba', function () {
     return view('layouts.app');
 });
 
-/* -------------------------  AUTH ------ */
-/* -----  LOGIN ------ */
-Route::view('/login', "login")->name('login');
-Route::view('/registro', "register")->name('registro');
-Route::view('/privada', "secret")->middleware('auth')->name('privada');
+
+Route::middleware('guest')->group(function () {
+    /* -------------------------  AUTH ------ */
+
+    /* -----  LOGIN ------ */
+    Route::view('/login', 'auth.login')->name('login');
+    Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
+    
+    /* -----  REGISTER ------ */
+    Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
+    Route::view('/register', "auth.register")->name('registro');
+
+});
+
+Route::middleware('auth')->group(function () {
+    /* -------------------------  AUTH ------ */
+
+    Route::view('/privada', "secret")->name('privada');
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+});
 
 /* -----  REGISTER ------ */
-Route::post('/validar-registro', [LoginController::class, 'register'])->name('validar-registro');
-Route::post('/inicia-sesion', [LoginController::class, 'login'])->name('inicia-sesion');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::post('/validar-registro',[LoginController::class,'register'])->name('validar-registro');
+
+
+/* Route::post('/validar-registro',[LoginController::class,'register'])->name('validar-registro');
 Route::post('/inicia-sesion', [LoginController::class,'login'])->name('inicia-sesion');
-Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');*/ 
 
 Route::get('/backlogs', [BacklogController::class, 'index'])->name('backlogs.index');
 Route::get('/backlogs/create', [BacklogController::class, 'create'])->name('backlogs.create');
