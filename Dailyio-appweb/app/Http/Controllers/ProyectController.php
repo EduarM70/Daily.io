@@ -37,7 +37,7 @@ class ProyectController extends Controller
             "goals"=> "required|min:25",
         ]);
         // creando proyecto
-        $request->user()->protects()->create([
+        $request->user()->proyects()->create([
             "name"=> $request->get("nameProyect"),
             "fecha_inicio" => $request->get("date"),
             "descripcion" => $request->get("description"),

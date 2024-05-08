@@ -3,7 +3,14 @@
 
 @section('content')
     <div class="dark:text-white p-1">
-        <x-navrouter page="Agenda" descripcion="No te olvides de revisar cómo está tu día" />
+        <x-navbar>
+            <x-nav.page name="Agenda" ruta="agenda.index" />
+        </x-navbar>
+
+        <div class="">
+            <h2 class="text-xl lg:text-2xl xl:text-4xl font-black uppercase text-violet-600 dark:text-white">Agenda</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">No te olvides de revisar cómo está tu día</p>
+        </div>
 
         <div class="w-full mt-10 dark:text-slate-200 grid lg:grid-cols-2 2xl:grid-cols-3 gap-6">
             <div class="bg-white dark:bg-slate-700 rounded-lg p-7">

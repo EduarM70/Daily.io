@@ -3,8 +3,15 @@
 
 @section('content')
     <div class="dark:text-white p-1">
-        <x-navrouter page="Tus Proyectos" descripcion="Encuentra todos los proyectos a los cuales estás unidos" />
+       
+        <x-navbar>
+            <x-nav.page name="Proyectos" ruta="proyects.index" />
+        </x-navbar>
 
+        <div class="">
+            <h2 class="text-xl lg:text-2xl xl:text-4xl font-black uppercase text-violet-600 dark:text-white">Tus Proyectos</h2>
+            <p class="text-sm text-slate-500 dark:text-slate-400">Encuentra todos los proyectos a los cuales te han incluido o eres el propietario</p>
+        </div>
         {{-- CUERPO DE LA VISTA PROYECTO --}}
 
         <div class="bg-white dark:bg-slate-700 p-4 px-6 mt-10 rounded-lg">
@@ -115,7 +122,7 @@
 
     <x-modal titleModal="Crea una Proyecto" color="violet" idModal="proyect-modal">
         <!-- Modal body -->
-        <form class="p-4 md:p-5" method="POST" action="{{ route('proyect.store') }}" novalidate>
+        <form class="p-4 md:p-5" method="POST" action="{{ route('proyect.store') }}">
             @csrf
             <div class="grid gap-4 mb-4 grid-cols-2">
                 <div class="col-span-2">

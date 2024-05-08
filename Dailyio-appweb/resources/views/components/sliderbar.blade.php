@@ -49,6 +49,7 @@
                   <span class="flex-1 ms-3 whitespace-nowrap">Daily.io Proyect</span>
                </a>
             </li>
+            
          </div>
          <div class="">
             <li>

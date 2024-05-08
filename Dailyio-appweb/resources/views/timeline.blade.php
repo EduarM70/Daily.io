@@ -2,7 +2,13 @@
 @section('title', 'Daily.io')
 
 @section('content')
-    <x-headerProyect />
+<div class="dark:text-white p-4 w-full">
+    <x-navbar>
+        <x-nav.page name="Proyectos" ruta="proyects.index" />
+        <x-nav.page name="Daily.io" ruta="proyect.index" />
+        <x-nav.page name="Timeline" ruta="proyect.timeline" />
+    </x-navbar>
+    <x-headerProyect title="Timeline" />
     {{-- CONTENT TAB --}}
     <div class="bg-white dark:bg-slate-700 dark:text-white my-4 p-4 rounded-xl overflow-auto"> {{-- DIV CENTRAL --}}
 
@@ -116,9 +122,8 @@
                 </div>
                 
             </div>
-        </div>
-
-        
-
+        </div>     
     </div>
+</div>
+    
 @endsection

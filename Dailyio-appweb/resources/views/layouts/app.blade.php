@@ -22,15 +22,15 @@
     </script>
 </head>
 
-<body class="font-dmsans dark:bg-slate-500">
+<body class="font-dmsans dark:bg-slate-800 bg-slate-50">
     <!-- PAGINA PRINCIPAL DE LA APP -->
 
     <!-- COMPONENTE HEADER -->
-    <x-navbar />
+    <x-header />
     <!-- COMPONENTE DEL SIDEBAR -->
     <x-sliderbar />
     <!-- Contenido prinicpal -->
-    <div class="p-4 sm:ml-64 dark:bg-slate-800 bg-slate-50 lg:h-screen">
+    <div class="p-4 sm:ml-64">
         <div class="p-4 mt-14">
             @yield('content')
         </div>

@@ -5,6 +5,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BacklogController;
 use App\Http\Controllers\MeetController;
 use App\Http\Controllers\ProyectController;
+use App\Http\Controllers\SprintController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -33,18 +34,12 @@ Route::delete('/backlogs/{backlog}', [BacklogController::class, 'destroy'])->nam
 
 Route::get('/agenda', function(){
     return view('agenda');
-});
+})->name('agenda.index');
 
 Route::get('/tareas', function () {
     return view('tareas');
 })->name('tareas');
 
-Route::get('/sprints', function () {
-    return view('sprints');
-});
-
-
-Route::view('/proyect/main', 'main')->name('proyect.index');
 
 Route::get('/taskSprint', function () {
     return view('taskSprint');
@@ -53,6 +48,21 @@ Route::get('/taskSprint', function () {
 // Rutas para Proyectos del Usuario (Proyects)
 Route::get('/proyectos', [ ProyectController::class, 'index'] )->name('proyects.index');
 Route::post('/proyectos/store', [ProyectController::class, 'store'])->name('proyect.store');
+
+
+// Space Proyect
+
+// Backlog - Overview
+Route::view('/proyect', 'overview')->name('proyect.index');
+
+// Rutas para los Sprints del Proyecto
+
+Route::get('/proyect/sprints', [SprintController::class, 'index'])->name('sprints.index');
+Route::post('/proyect/sprint/create', [SprintController::class])->name('sprint.store');
+
+// Rutas para e timeLine
+
+Route::view('/proyect/timeline', 'timeline')->name('proyect.timeline');
 
 // Rutas para Reuniones (Meets)
 
