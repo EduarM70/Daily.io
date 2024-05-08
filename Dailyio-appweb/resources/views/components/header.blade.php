@@ -25,8 +25,8 @@
                     <div class="flex gap-2">
                         <!-- Información del Usuario -->
                         <div class="dark:text-white leading-none text-right px-2">
-                            <h3 class="text-sm">Martín Carbajal</h3>
-                            <p class="text-xs text-slate-500 dark:text-slate-300">Adminitrador</p>
+                            <h3 class="text-sm">@auth {{Auth::user()->name}} @endauth</h3>
+                            <p class="text-xs text-slate-500 dark:text-slate-300">Usuario</p>
                         </div>
                         <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Open user menu</span>

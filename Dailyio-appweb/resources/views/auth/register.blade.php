@@ -15,7 +15,7 @@
                 <p class="text-slate-400 text-left">¡Bienvenido! Comienza un nuevo camino para tus proyectos</p>
             </div>
 
-            <form class="mx-auto w-full mt-5" method="POST" action="{{ route('inicia-sesion') }}">
+            <form class="mx-auto w-full mt-5" method="POST" action="{{ route('validar-registro') }}">
                 @csrf
                 <div class="mb-5">
                     <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nomrbe de Usuario</label>

@@ -23,7 +23,7 @@ class LoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return redirect('registro')
+            return redirect('register')
                         ->withErrors($validator)
                         ->withInput();
         }
@@ -38,7 +38,7 @@ class LoginController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('privada'));
+        return redirect(route('agenda.index'));
     }
 
     public function login(Request $request)
@@ -64,9 +64,9 @@ class LoginController extends Controller
 
         if(Auth::attempt($credentials, $remember)){
             $request->session()->regenerate();
-            return redirect()->intended(route('privada'));
+            return to_route('agenda.index');
         }else{
-            return redirect('login');
+            return to_route('login');
         }
     }
 
