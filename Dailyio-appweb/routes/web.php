@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\BacklogController;
+use App\Http\Controllers\MeetController;
+use App\Http\Controllers\ProyectController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -35,17 +37,24 @@ Route::get('/agenda', function(){
 
 Route::get('/tareas', function () {
     return view('tareas');
-});
+})->name('tareas');
 
 Route::get('/sprints', function () {
     return view('sprints');
 });
 
 
-Route::get('/proyect', function () {
-    return view('main');
-});
+Route::view('/proyect/main', 'main')->name('proyect.index');
 
 Route::get('/taskSprint', function () {
     return view('taskSprint');
 });
+
+// Rutas para Proyectos del Usuario (Proyects)
+Route::get('/proyectos', [ ProyectController::class, 'index'] )->name('proyects.index');
+Route::post('/proyectos/store', [ProyectController::class, 'store'])->name('proyect.store');
+
+// Rutas para Reuniones (Meets)
+
+Route::view('/agenda','agenda')->name('agenda.index');
+Route::post('/agenda', [MeetController::class, 'store'])->name('meet.store');
