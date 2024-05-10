@@ -27,13 +27,15 @@
     <div class="mt-10">
         <h2 class="text-4xl font-black uppercase">Tus Tareas</h2>
     </div>
-    <button type="button" class="mt-5 inline-flex items-center text-white bg-red-600 hover:bg-red-700 focus:ring-4 font-medium rounded-lg text-base px-5 py-2.5 text-center ">
-        Agregar Tareas
+    <button class="mt-5 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-cyan-500 to-blue-500 group-hover:from-cyan-500 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-cyan-200 dark:focus:ring-cyan-800">
+        <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+            + Agregar Tarea
+        </span>
     </button>
     <div class="flex-1 p-4">
-        <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-2 gap-4">
-            <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
-                <div class="flex justify-between items-center mb-4">
+        <div class="w-full mt-4 dark:text-slate-200 grid md:grid-cols-2 2xl:grid-cols-2 gap-4 ">
+            <div class="bg-white dark:bg-slate-700 rounded-lg p-7 shadow-2xl">
+                <div class="flex justify-between items-center mb-4 ">
                     <h3 class="font-bold text-cyan-400 text-xl">Hoy</h3>
                     <button class="p-2 pb-1 text-sm bg-cyan-400 rounded-md text-white flex items-center gap-2"><span class="hidden xl:block mb-1">Fecha de entrega</span></button>
                 </div>
@@ -80,8 +82,8 @@
                     </li>
                 </div>
             </div>
-            <div class="bg-white dark:bg-slate-700 rounded-lg p-7">
-                <div class="flex justify-between items-center mb-4">
+            <div class="bg-white dark:bg-slate-700 rounded-lg p-7 shadow-2xl">
+                <div class="flex justify-between items-center mb-4 ">
                     <h3 class="font-bold text-cyan-400 text-xl">Mañana</h3>
                 </div>
                 <div class="text-center p-4 bg-cyan-50 dark:bg-slate-600 border border-cyan-300 dark:border-slate-500 rounded-lg">
@@ -126,15 +128,23 @@
                         </div>
                     </li>
                 </div>
+
             </div>
 
-            <a class="dark:text-indigo-500 inline-flex items-center">Siguiente Semana
-                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M5 12h14"></path>
-                    <path d="M12 5l7 7-7 7"></path>
-                </svg>
-            </a>
         </div>
+        <div class="mt-10 flex items-center p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-400" role="alert">
+            <svg class="flex-shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z" />
+            </svg>
+            <span class="sr-only">Info</span>
+            <div>
+                <span class="font-medium">Recuerda!</span> "Es fundamental que mantengas una constante atención en tus responsabilidades diarias y que, al completarlas, las marques como finalizadas. Este simple acto te permitirá llevar un registro claro de tu progreso y te ayudará a gestionar tu tiempo de manera más efectiva."
+            </div>
+        </div>
+        <button type="button" class="flex items-center text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Siguiente semana <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14"></path>
+                <path d="M12 5l7 7-7 7"></path>
+            </svg></button>
     </div>
 </div>
 </div>
